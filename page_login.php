@@ -31,17 +31,16 @@
     <?php    
     if(isset($_POST['login']) && isset($_POST['password'])){    
         session_start();
-        /*
+
         $servername = "sql104.byethost11.com";
         $username = "b11_35479412";
         $password = 'Llellb565634$gh';
         $dbname = 'b11_35479412_eee';
-        */
 
-        $servername = "localhost";
+        /*$servername = "127.0.0.1:3306";
         $username = "root";
-        $password = 'janadzi2023<<';
-        $dbname = 'projekt';
+        $password = 'Llellb565634$gh';
+        $dbname = 'database_name';*/
     
         // Create connection
         $conn = new mysqli($servername, $username, $password);

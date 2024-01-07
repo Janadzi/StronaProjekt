@@ -38,18 +38,20 @@
     
             if($input_user == "" || $input_passw_rep == ""){
                 echo "Puste pola";
+            } elseif($_POST['password'] != $_POST['password_repeat']){
+                echo "Różne hasła";
             } else {
+                session_start();
                 # Tworzenie konta
-                /*
                 $servername = "sql104.byethost11.com";
                 $username = "b11_35479412";
                 $password = 'Llellb565634$gh';
                 $dbname = 'b11_35479412_eee';
-                */
-                $servername = "localhost";
+
+                /*$servername = "127.0.0.1:3306";
                 $username = "root";
-                $password = 'janadzi2023<<';
-                $dbname = 'projekt';
+                $password = 'Llellb565634$gh';
+                $dbname = 'database_name';*/
             
                 // Create connection
                 $conn = new mysqli($servername, $username, $password);
@@ -60,17 +62,16 @@
                 }
         
                 mysqli_select_db($conn, $dbname);
-                $query = "select Login from Konta";
+
+                $query = "SELECT * FROM Konta WHERE Login = ?";
                 $stmt = $conn->prepare($query);
+                $stmt->bind_param("s", $input_user);
                 $stmt->execute();
                 $result = $stmt->get_result();
-                
-                
-                while ($row = $result->fetch_assoc()) {
-                    if ($row["Login"] == $input_user){
-                        $is_unique = false;
-                        break;
-                    }
+
+                if ($result->num_rows > 0) {
+                    $is_unique = false;
+                    echo "<p>Istnieje użytkownik o takim loginie</p>";
                 }
                 
                 if ($is_unique){
@@ -80,18 +81,16 @@
                     $stmt = $conn->prepare($query);
                     $stmt->bind_param("ssi", $input_user, $hashedPassword, $przywilej);
                     $stmt->execute();
+
+                    $_SESSION['last_id'] = $conn->insert_id;
+
                     $stmt->close();
                     $conn->close(); 
 
                     echo '<script>
-                    window.location.href = "page_login.php";
+                        window.location.href = "page_dane_osobowe.php";
                     </script>';
                 }
-
-
-                
-                $stmt->close();
-                $conn->close(); 
             }
             
         }

@@ -10,7 +10,10 @@
     session_start();
     if(isset($_SESSION["uprawnienia"])){
         if($_SESSION["uprawnienia"] == 1){
-             echo "<a href=\"#\">Zarządzaj pracownikami</a>";
+            echo '<a href="page_control.php">Zarządzanie</a>';
+        }
+        else if($_SESSION["uprawnienia"] == 2){
+            echo '<a href="page_create_query.php">Stwórz zapytanie</a>';
         }
     }
     ?> 
