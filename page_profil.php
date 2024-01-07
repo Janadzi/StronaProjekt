@@ -23,10 +23,7 @@
         echo "</form>";
         }
 
-        $servername = "localhost";
-        $username = "root";
-        $password = 'janadzi2023<<';
-        $dbname = 'projekt';
+        include('db_config.php');
 
         /*$servername = "sql104.byethost11.com";
         $username = "b11_35479412";

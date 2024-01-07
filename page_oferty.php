@@ -10,10 +10,7 @@
 
 <body>
     <?php include 'navbar.php'; 
-    $servername = "localhost";
-$username = "root";
-$password = 'janadzi2023<<';
-$dbname = 'projekt';
+    include('db_config.php');
 
 // Tworzenie połączenia
 $conn = new mysqli($servername, $username, $password, $dbname);
