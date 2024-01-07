@@ -1,0 +1,47 @@
+body {
+    margin: 20px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 10%;
+
+    background-color: limegreen;
+    padding: 40px;
+    border-radius: 10px;
+    width: 190px;
+}
+
+#content input[type=submit]{
+    font-size: 15px;
+    background-color: #aaa;
+    cursor: pointer;
+    border: 2px solid #aaa;
+    width: 100%;
+    height: 30px; 
+
+    margin-top: 20px;
+}
+
+#content p{
+    margin-bottom: 3px;
+}
+
+#content input[type=submit]:hover{
+    border: 2px solid white;
+}
+
+#content a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#content a:hover{
+    color: #4e4e4e;
+}

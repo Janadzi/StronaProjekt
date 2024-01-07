@@ -1,0 +1,93 @@
+body {
+    margin: 20px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  background-color: #aaa;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  border: 3px solid #aaa;
+}
+
+.topnav a:hover {
+    border: 3px solid white;
+}
+
+.konto{
+    float: right;
+}
+
+.konto .konto_info{
+    position: absolute;
+    width: 300px;
+    background-color: green;
+    display: none;
+    margin-top: 55px;
+    margin-left: -250px;
+    padding: 15px;
+    z-index: 9000;
+}
+
+.konto_info a{
+    background-color: #aaa;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.logout{
+    margin-top: 100px;
+}
+
+.searchbar{
+    float: right;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.searchbar input[type=text]{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.searchbar input[type=submit]{
+    font-size: 25px;
+    background-color: #aaa;
+    cursor: pointer;
+    border: 2px solid #aaa;
+}
+
+.searchbar input[type=submit]:hover{
+    border: 2px solid white;
+}
+
+.image_scroll{
+    margin-top: 40px;
+    overflow: hidden;
+    float: left;
+}
+
+.image_scroll img{
+    height: 500px;
+    width: 1200px;
+    background-size: cover;
+}
+
+.oferta_info{
+    position: fixed;
+    background-color: rgb(255, 255, 255, 0.7);
+    width: 300px;
+    font-size: 20px;
+    height: 80px;
+    margin-top: 420px;
+}
