@@ -38,7 +38,7 @@
                 echo "Puste pola";
             } else {
                 session_start();
-                $last_id = $_SESSION['last_id'];
+                $last_id = $_SESSION["id"];
 
                 $servername = "localhost";
                 $username = "root";
