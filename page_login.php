@@ -32,9 +32,7 @@
     if(isset($_POST['login']) && isset($_POST['password'])){    
         session_start();
 
-        include('db_config.php');
-
-    
+        require("db_config.php");
         // Create connection
         $conn = new mysqli($servername, $username, $password);
     

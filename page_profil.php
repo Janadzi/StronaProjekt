@@ -22,8 +22,7 @@
         echo "<input type=\"submit\" name=\"delete_account\" value=\"Usuń Konto\">";
         echo "</form>";
         }
-
-        include('db_config.php');
+        require("db_config.php");
 
         /*$servername = "sql104.byethost11.com";
         $username = "b11_35479412";

@@ -32,7 +32,7 @@
    
    if(isset($_POST['login']) && isset($_POST['password'])){  
         
-        include('db_config.php');
+        require("db_config.php");
 
         /*localhost_OLA*/
         /*$servername = "127.0.0.1:3306";

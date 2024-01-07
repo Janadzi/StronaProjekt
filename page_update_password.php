@@ -37,10 +37,7 @@
             if( $_POST['password'] == $_POST['password_repeat']){
             session_start();
             
-            $servername = "localhost";
-            $username = "root";
-            $password = 'janadzi2023<<';
-            $dbname = 'projekt';
+            require("db_config.php");
 
             /*$servername = "sql104.byethost11.com";
             $username = "b11_35479412";
