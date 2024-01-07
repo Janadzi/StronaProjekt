@@ -81,6 +81,9 @@
     <form action="page_update_password.php"  method="post">
     <input type="submit" name="update_password" value="Zmień Hasło">
     </form>
+    <form action="page_dane_osobowe.php"  method="post">
+    <input type="submit" name="update_userdata" value="Edytuj Dane Osobowe">
+    </form>
     <a href="index.php">Wróć na Główną<a>
 </body>
 </html>
