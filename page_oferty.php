@@ -31,10 +31,31 @@ $result = $conn->query($sql);
 
 // Sprawdzenie czy wynik istnieje i wyświetlenie danych
 if ($result->num_rows > 0) {
-    // Wyświetlanie danych dla każdego wiersza
+    echo '<table>';
+    echo '<tr>
+            <th>Nazwa</th>
+            <th>Kraj</th>
+            <th>Miejscowość</th>
+            <th>Cena</th>
+            <th>Hotele</th>
+            <th>Wycieczki</th>
+            <th>Ocena</th>
+          </tr>';
+    
     while($row = $result->fetch_assoc()) {
-        echo "Nazwa: " . $row["Nazwa"]. " - Kraj: " . $row["Kraj"]. " - Miejscowosc: " . $row["Miejscowosc"]. " - Cena: " . $row["Cena"]. " - Hotele: " . $row["Hotele"]. " - Wycieczki: " . $row["Wycieczki"]. " - Ocena: " . $row["Ocena"]. "<br>";
+        echo '<tr>';
+        echo '<td>'.$row["Nazwa"].'</td>';
+        echo '<td>'.$row["Kraj"].'</td>';
+        echo '<td>'.$row["Miejscowosc"].'</td>';
+        echo '<td>'.$row["Cena"].'</td>';
+        echo '<td>'.$row["Hotele"].'</td>';
+        echo '<td>'.$row["Wycieczki"].'</td>';
+        echo '<td>'.$row["Ocena"].'</td>';
+        echo '<td><button onclick="kupOferte('.$row["Id_Oferty"].')">Kup</button></td>'; // Przycisk Kup
+        echo '</tr>';
     }
+    
+    echo '</table>';
 } else {
     echo "Brak danych.";
 }
