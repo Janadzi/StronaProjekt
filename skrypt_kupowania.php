@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['oferta_id'])) {
     }
 
     // Zapytanie SQL
-    $query = "INSERT INTO zakupione_wycieczki (user_id, oferta_id) VALUES (?, ?)";
+    $query = "INSERT INTO zakupione_oferty (user_id, oferta_id) VALUES (?, ?)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("ii", $user_id, $oferta_id);
     if ($stmt->execute()){

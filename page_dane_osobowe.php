@@ -38,7 +38,12 @@
                 echo "Puste pola";
             } else {
                 session_start();
-                $last_id = $_SESSION["id"];
+                if (isset($_SESSION["id"])){
+                    $last_id = $_SESSION["id"];
+                } else{
+                    $last_id = $_SESSION["last_id"];
+                }
+                
 
                 include('db_config.php');
 
