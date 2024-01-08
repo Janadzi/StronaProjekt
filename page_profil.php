@@ -23,15 +23,20 @@
         echo "</form>";
         }
 
+        $servername = "localhost";
+        $username = "root";
+        $password = 'janadzi2023<<';
+        $dbname = 'projekt';
+
         /*$servername = "sql104.byethost11.com";
         $username = "b11_35479412";
         $password = 'Llellb565634$gh';
         $dbname = 'b11_35479412_eee';*/
         
-        $servername = "127.0.0.1:3306";
+        /*$servername = "127.0.0.1:3306";
         $username = "root";
         $password = 'Llellb565634$gh';
-        $dbname = 'database_name';
+        $dbname = 'database_name';*/
 
         $conn = new mysqli($servername, $username, $password);
             
@@ -75,6 +80,9 @@
     ?>
     <form action="page_update_password.php"  method="post">
     <input type="submit" name="update_password" value="Zmień Hasło">
+    </form>
+    <form action="page_dane_osobowe.php"  method="post">
+    <input type="submit" name="update_userdata" value="Edytuj Dane Osobowe">
     </form>
     <a href="index.php">Wróć na Główną<a>
 </body>

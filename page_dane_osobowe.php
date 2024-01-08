@@ -38,18 +38,22 @@
                 echo "Puste pola";
             } else {
                 session_start();
-                $last_id = $_SESSION['last_id'];
+                $last_id = $_SESSION["id"];
 
-                # Tworzenie konta
+                $servername = "localhost";
+                $username = "root";
+                $password = 'janadzi2023<<';
+                $dbname = 'projekt';
+
                 /*$servername = "sql104.byethost11.com";
                 $username = "b11_35479412";
                 $password = 'Llellb565634$gh';
                 $dbname = 'b11_35479412_eee';*/
 
-                $servername = "127.0.0.1:3306";
+                /*$servername = "127.0.0.1:3306";
                 $username = "root";
                 $password = 'Llellb565634$gh';
-                $dbname = 'database_name';
+                $dbname = 'database_name';*/
             
                 // Create connection
                 $conn = new mysqli($servername, $username, $password);
