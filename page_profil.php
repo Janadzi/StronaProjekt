@@ -80,6 +80,9 @@
     <form action="page_dane_osobowe.php"  method="post">
     <input type="submit" name="update_userdata" value="Edytuj Dane Osobowe">
     </form>
+    <form action="zakupione_oferty.php"  method="post">
+    <input type="submit" name="show_purchases" value="Wyświetl Zakupione Oferty">
+    </form>
     <a href="index.php">Wróć na Główną<a>
 </body>
 </html>
